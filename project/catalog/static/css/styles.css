@@ -1,0 +1,18 @@
+.col-sm-2 {
+    padding-top : 100 px;
+    justify-content: left;
+    background-color: black;
+    color: aliceblue;
+    font-size: 120%;
+    
+}
+.col-sm-10 {
+    background-color: rgb(3, 187, 141);
+    color: aliceblue;
+    font-size: 105%;
+}
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}

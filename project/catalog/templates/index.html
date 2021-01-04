@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/JOOX_font_logo.svg/1410px-JOOX_font_logo.svg.png" alt="JOOX Logo" width="350px">
+<h1>JOOX Music Player List</h1>
+<p>We have all of your favorite songs</p>
+<p>The JOOX App has the following record counts:</p>
+<ul>
+    <li><strong>Songs:</string> {{ num_songs }}</li>
+    <li><string>Song Writers:</strong> {{ num_songwriters }}</li>
+    <li><strong>Releases:</strong> {{ num_releases }}</li>
+</ul>
+
+{% endblock %}
