@@ -58,6 +58,13 @@
             <p>
                 Don't have an account? <a href="{% url 'register' %}">Sign Up</a>
             </p>
+            <p>
+                {% if 'login' in request.path %}
+                        <a href="{% url 'login' %}?next={{ '/' }}">Log In</a>
+                        {% else %}
+                        <a href="{% url 'login' %}?next={{ request.path }}">Log In</a>
+                        {% endif %}
+            </p>
         </div>
     </div>
 </div>

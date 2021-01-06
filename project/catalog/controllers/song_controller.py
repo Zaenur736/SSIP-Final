@@ -13,7 +13,7 @@ def index(request):
     data = {
         'songs': songs,
     }
-    return render(request, 'catalog/index.html', context=data)
+    return render(request, '../templates/catalog/index.html', context=data)
     
 @login_required
 def listsong(request):

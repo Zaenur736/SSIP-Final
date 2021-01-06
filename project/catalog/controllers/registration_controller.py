@@ -29,7 +29,7 @@ def index(request):
                 [email],
                 fail_silently=True,
             )
-        return HttpResponseRedirect('accounts/login')  # show login page if successful
+        return HttpResponseRedirect('../accounts/login')  # show login page if successful
     data = {
         'user_exists_error': msg,
     }
