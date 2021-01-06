@@ -3,10 +3,11 @@
     justify-content: left;
     background-color: black;
     color: aliceblue;
-    font-size: 300%;
+    font-size: 120%;
     
 }
 .col-sm-10 {
+    min-height: 100vh;
     background-color: rgb(3, 187, 141);
     color: aliceblue;
     font-size: 105%;
@@ -16,3 +17,27 @@
     padding: 0;
     list-style: none;
 }
+
+.gambar{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#footer { /*makes a footer section*/
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    color: black;
+    font-size: 1px;
+    background-color: white;
+}
+
