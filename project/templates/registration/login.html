@@ -59,6 +59,7 @@
                 Don't have an account? <a href="{% url 'register' %}">Sign Up</a>
             </p>
             <p>
+                Click this first!
                 {% if 'login' in request.path %}
                         <a href="{% url 'login' %}?next={{ '/' }}">Log In</a>
                         {% else %}
