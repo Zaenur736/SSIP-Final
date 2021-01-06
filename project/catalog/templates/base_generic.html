@@ -18,12 +18,23 @@
         <div class="row">
                 {% block sidebar %}
                 <div class="col-sm-2">
+                        {% if user.is_authenticated %}
+                        Hello, {{ user.get_username }}
+                        
+                        {% else %}
+                        {% if 'login' in request.path %}
+                        <a href="{% url 'login' %}?next={{ '/' }}">Log In</a>
+                        {% else %}
+                        <a href="{% url 'login' %}?next={{ request.path }}">Log In</a>
+                        {% endif %}
+                        {% endif %}
                     <h3 class="w3-bar-item"> <a href="{% url 'index' %}" class="w3-bar-item w3-button">Home</a></br> </h3>
-                    <a href="{% url 'songs' %}" class="w3-bar-item w3-button">Song list</a></br>
-                    <a href="{% url 'songwriters' %}" class="w3-bar-item w3-button">Song writer list</a></br>
-                    <a href="{% url 'releases' %}" class="w3-bar-item w3-button">Release year</a></br>
+                    <a href="{% url 'listsong' %}" class="w3-bar-item w3-button">Song List</a></br>
+                    <a href="{% url 'listsinger' %}" class="w3-bar-item w3-button">Singer List</a></br>
+                    <a href="{% url 'listalbum' %}" class="w3-bar-item w3-button">Album list</a></br>
+                    <a href="{% url 'logout' %}?next={{ request.path }}">Log Out</a>
                 {% endblock %}
-            </div>
+                </div>
             <div class="col-sm-10">
                 <div style="margin-left:3%">
                     {% block content %}{% endblock %}</div></div>

@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+{% block title %}
+<title>
+   Album List Page
+</title>
+{% endblock %}
+{% block content %}
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/JOOX_font_logo.svg/1410px-JOOX_font_logo.svg.png" alt="JOOX Logo" width="350px">
+<h1>JOOX Music Player List</h1>
+<p> </p>
+<p> </p>
+   <ul>
+       {% for album in listalbums %}
+       <li><strong>{{ album }} </strong> ({{album.singer}},{{album.year}}) </li>
+       {% endfor %}
+   </ul> 
+   <p>
+      <a href="{% url 'add_album' %}">Add Album</a>
+   </p>
+{% endblock %}

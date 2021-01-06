@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'library.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_mid_django',
+        'NAME': 'db_final_django',
         'USER' : 'django',
         'PASSWORD' : '245863',
         'HOST' : '127.0.0.1',
@@ -131,3 +131,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/static/css/styles.css/',
     ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'kkryxx.skuy@gmail.com'
+EMAIL_HOST_PASSWORD = 'zakialmer111'
