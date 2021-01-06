@@ -7,7 +7,7 @@ from django.urls import reverse
 
 @login_required
 def listalbum(request):
-    listalbums = Album.objects.order_by('name')
+    listalbums = Album.objects.order_by('-year')
     data = {
         'listalbums': listalbums,
     }
