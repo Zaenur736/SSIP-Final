@@ -20,9 +20,10 @@ def index(request):
             user.save()  # save to db
             msg = ''  # empty message, no error, then send mail using configured EMAIL_HOST_USER
             send_mail(
+                'JOOX Account Registration',
                 'HELLO THERE! HELLO THERE!'
                 'Good News Is Coming To You !!'
-                'Your Registration To JOOX Is Successful',
+                'Your Registration To JOOX Is Successful'
                 'You are now a member of Django JOOX Music Player!',
                 settings.EMAIL_HOST_USER,
                 [email],
